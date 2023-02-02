@@ -1,0 +1,11 @@
+C:\programacion\CS\Encrypter\bin\Debug\Encrypter.exe.config
+C:\programacion\CS\Encrypter\bin\Debug\Encrypter.exe
+C:\programacion\CS\Encrypter\bin\Debug\Encrypter.pdb
+C:\programacion\CS\Encrypter\obj\Debug\Encrypter.csproj.AssemblyReference.cache
+C:\programacion\CS\Encrypter\obj\Debug\Encrypter.csproj.SuggestedBindingRedirects.cache
+C:\programacion\CS\Encrypter\obj\Debug\Encrypter.FrmMain.resources
+C:\programacion\CS\Encrypter\obj\Debug\Encrypter.Properties.Resources.resources
+C:\programacion\CS\Encrypter\obj\Debug\Encrypter.csproj.GenerateResource.cache
+C:\programacion\CS\Encrypter\obj\Debug\Encrypter.csproj.CoreCompileInputs.cache
+C:\programacion\CS\Encrypter\obj\Debug\Encrypter.exe
+C:\programacion\CS\Encrypter\obj\Debug\Encrypter.pdb
