@@ -42,7 +42,10 @@ namespace Encrypter
 
         private void btnCopyE_Click(object sender, EventArgs e)
         {
-            Utils.toClipboard(txtEncrypted.Text);
+            if (!string.IsNullOrEmpty(txtEncrypted.Text))
+            {
+                Utils.toClipboard(txtEncrypted.Text);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -55,26 +58,37 @@ namespace Encrypter
             string key = txtSecretw2.Text;
             string text = txtText2.Text;
 
-            if(key.Length == 16 && key.Length > 0)
+            try
             {
-                if (!string.IsNullOrEmpty(text))
+                if (key.Length == 16 && key.Length > 0)
                 {
-                    txtDecrypted.Text = Utils.Decrypt(key,text);
+                    if (!string.IsNullOrEmpty(text))
+                    {
+                        txtDecrypted.Text = Utils.Decrypt(key, text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Encrypted text can't be empty", "Encrypter", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Encrypted text can't be empty", "Encrypter", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Secret Key too short, expect at least 16 characters or above", "Encrypter", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Secret Key too short, expect at least 16 characters or above", "Encrypter", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Decrypting error, " + ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            
         }
 
         private void btnCopy2_Click(object sender, EventArgs e)
         {
-            Utils.toClipboard(txtDecrypted.Text);
+            if (!string.IsNullOrEmpty(txtDecrypted.Text))
+            {
+                Utils.toClipboard(txtDecrypted.Text);
+            }
         }
     }
 }
